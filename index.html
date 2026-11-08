@@ -8,6 +8,12 @@
   <meta property="og:title" content="Mert Tereci">
   <meta property="og:description" content="Backend, mobil ve makine öğrenmesi projeleri. Backend, mobile and machine learning projects.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://merttereci.github.io/">
+  <meta property="og:image" content="https://merttereci.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Mert Tereci. Backend, Mobile, Machine Learning.">
+  <meta name="twitter:card" content="summary_large_image">
   <meta name="theme-color" content="#0b2124">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b2124'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='16' text-anchor='middle' fill='%2345d6c8'%3EMT%3C/text%3E%3C/svg%3E">
   <script>
@@ -55,8 +61,8 @@
           <span lang="tr">Bilgisayar Mühendisliği, Ondokuz Mayıs Üniversitesi, 2026</span>
           <span lang="en">Computer Engineering, Ondokuz Mayıs University, 2026</span>
         </p>
-        <p class="hero__intro" lang="tr">Python ve FastAPI ile backend, Flutter ile mobil uygulama geliştiriyorum. Bitirme projemde derin öğrenmeyle deepfake tespiti üzerine çalıştım.</p>
-        <p class="hero__intro" lang="en">I build backend services with Python and FastAPI and mobile apps with Flutter. For my senior thesis, I worked on deepfake detection with deep learning.</p>
+        <p class="hero__intro" lang="tr">Python ve FastAPI ile backend, Flutter ile mobil uygulama geliştiriyorum. Bitirme projemde derin öğrenmeyle deepfake tespiti üzerine çalıştım. Backend ya da mobil alanında junior pozisyonlara açığım.</p>
+        <p class="hero__intro" lang="en">I build backend services with Python and FastAPI and mobile apps with Flutter. For my senior thesis, I worked on deepfake detection with deep learning. I’m open to junior backend or mobile roles.</p>
         <div class="actions">
           <a class="btn btn--primary" href="#contact" data-email>
             <span lang="tr">E-posta gönder</span><span lang="en">Email me</span>
@@ -165,13 +171,13 @@
               <ul class="details" lang="tr">
                 <li>Derinlik 4’teki Expectimax, hamle başına yaklaşık 4 kat daha az süre harcayarak (2,42 ms ve 9,18 ms) derinlik 6’daki Alfa-Beta’yı geçiyor.</li>
                 <li>Arama ve değerlendirme fonksiyonları Numba ile derleniyor. Hamle başına süre düz Python’a göre yaklaşık 20 kat kısaldı, iki sürüm de birebir aynı hamleleri seçti.</li>
-                <li>Tahta altı heuristic’in ağırlıklı toplamıyla puanlanıyor. Boş hücre sayısı, monotonluk, düzgünlük, birleşme potansiyeli, köşe bonusu ve yılan deseni.</li>
+                <li>Tahta altı heuristic’in ağırlıklı toplamıyla puanlanıyor: boş hücre sayısı, monotonluk, düzgünlük, birleşme potansiyeli, köşe bonusu ve yılan deseni.</li>
                 <li>Sonradan yapılan kod değişikliklerinin ajanların oyununu değiştirmediği, kayıtlı 427 oyun yeniden oynatılarak doğrulandı.</li>
               </ul>
               <ul class="details" lang="en">
                 <li>Expectimax at depth 4 beats Alpha-Beta at depth 6 while spending about 4 times less time per move (2.42 ms against 9.18 ms).</li>
                 <li>Search and evaluation are compiled with Numba. Time per move was about 20 times shorter than in plain Python, and both versions chose exactly the same moves.</li>
-                <li>Boards are scored as a weighted sum of six heuristics. Empty cells, monotonicity, smoothness, merge potential, a corner bonus and a snake pattern.</li>
+                <li>Boards are scored as a weighted sum of six heuristics: empty cells, monotonicity, smoothness, merge potential, a corner bonus and a snake pattern.</li>
                 <li>Later code changes were checked by replaying 427 recorded games, and every one played out the same.</li>
               </ul>
 
@@ -257,13 +263,13 @@
                 <li>Real Recall’daki artış FF++ dengeli 80-20 yapılandırmasında. Aynı yapılandırmada sahte yüzleri yakalama oranı (Fake Recall) %87,65’ten %80,27’ye düştü.</li>
                 <li>CutMixup, Celeb-DF v2’de %99,89 AUC’ye ulaştı.</li>
                 <li>Dengesiz veride doğruluk tek başına yanıltıcı. MesoNet %84,27 doğruluğa ulaştı ama gerçek yüzlerin yalnızca %9,87’sini yakalayabildi.</li>
-                <li>Sınırlamalar. Çapraz veri kümesi testi yapılmadı, sadece c23 sıkıştırma seviyesi kullanıldı, CutMixup yalnızca ViT-Base üzerinde denendi.</li>
+                <li>Sınırlamalar: çapraz veri kümesi testi yapılmadı, sadece c23 sıkıştırma seviyesi kullanıldı, CutMixup yalnızca ViT-Base üzerinde denendi.</li>
               </ul>
               <ul class="details" lang="en">
                 <li>The Real Recall gain is on the FF++ balanced 80-20 configuration. In the same configuration, Fake Recall dropped from 87.65% to 80.27%.</li>
                 <li>On Celeb-DF v2, CutMixup reached an AUC of 99.89%.</li>
                 <li>On imbalanced data, accuracy alone is misleading. MesoNet reached 84.27% accuracy but caught only 9.87% of real faces.</li>
-                <li>Limitations. No cross-dataset tests, only the c23 compression level, and CutMixup was tried only on ViT-Base.</li>
+                <li>Limitations: no cross-dataset tests, only the c23 compression level, and CutMixup was tried only on ViT-Base.</li>
               </ul>
 
               <div class="project__foot">
