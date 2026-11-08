@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="tr" data-lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Mert Tereci, Bilgisayar Mühendisi</title>
+  <meta name="description" content="Mert Tereci. Backend, mobil ve makine öğrenmesi projeleri. Backend, mobile and machine learning projects.">
+  <meta property="og:title" content="Mert Tereci">
+  <meta property="og:description" content="Backend, mobil ve makine öğrenmesi projeleri. Backend, mobile and machine learning projects.">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0b2124">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230b2124'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='16' text-anchor='middle' fill='%2345d6c8'%3EMT%3C/text%3E%3C/svg%3E">
+  <script>
+    // Dil, sayfa çizilmeden önce seçilir. Önce kayıtlı seçim, yoksa tarayıcı dili.
+    (function () {
+      var lang = null;
+      try { lang = localStorage.getItem("lang"); } catch (e) {}
+      if (lang !== "tr" && lang !== "en") {
+        lang = /^tr\b/i.test(navigator.language || "") ? "tr" : "en";
+      }
+      document.documentElement.setAttribute("data-lang", lang);
+      document.documentElement.setAttribute("lang", lang);
+    })();
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main"><span lang="tr">İçeriğe geç</span><span lang="en">Skip to content</span></a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#top">Mert Tereci</a>
+      <nav class="nav" aria-label="Menü" data-i18n-attr="aria-label" data-tr-aria-label="Menü" data-en-aria-label="Menu">
+        <a href="#projects"><span lang="tr">Projeler</span><span lang="en">Projects</span></a>
+        <a href="#skills"><span lang="tr">Yetenekler</span><span lang="en">Skills</span></a>
+        <a href="#contact"><span lang="tr">İletişim</span><span lang="en">Contact</span></a>
+      </nav>
+      <div class="lang-switch" role="group" aria-label="Dil / Language">
+        <button type="button" data-lang="tr" aria-pressed="true">TR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Giriş -->
+    <section class="hero" id="top">
+      <div class="wrap">
+        <h1 class="hero__name">Mert Tereci</h1>
+        <p class="hero__meta">
+          <span lang="tr">Bilgisayar Mühendisliği, Ondokuz Mayıs Üniversitesi, 2026</span>
+          <span lang="en">Computer Engineering, Ondokuz Mayıs University, 2026</span>
+        </p>
+        <p class="hero__intro" lang="tr">Python ve FastAPI ile backend, Flutter ile mobil uygulama geliştiriyorum. Bitirme projemde derin öğrenmeyle deepfake tespiti üzerine çalıştım.</p>
+        <p class="hero__intro" lang="en">I build backend services with Python and FastAPI and mobile apps with Flutter. For my senior thesis, I worked on deepfake detection with deep learning.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="#contact" data-email>
+            <span lang="tr">E-posta gönder</span><span lang="en">Email me</span>
+          </a>
+          <a class="btn" href="https://www.linkedin.com/in/mert-tereci" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/merttereci" rel="noopener">GitHub</a>
+          <a class="btn" lang="tr" href="assets/Mert-Tereci-CV-TR.pdf" download>CV’yi indir</a>
+          <a class="btn" lang="en" href="assets/Mert-Tereci-CV-EN.pdf" download>Download CV</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projeler -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="wrap">
+        <h2 class="section__title" id="projects-title"><span lang="tr">Projeler</span><span lang="en">Projects</span></h2>
+        <p class="section__lead" lang="tr">Sayıların hepsi ilgili repodan ya da tezin sonuç tablolarından alındı.</p>
+        <p class="section__lead" lang="en">All numbers are taken from the project’s repository or from the thesis result tables.</p>
+
+        <div class="projects">
+          <ol class="project-index" aria-label="Projeler" data-i18n-attr="aria-label" data-tr-aria-label="Projeler" data-en-aria-label="Projects">
+            <li><a href="#netflix"><span lang="tr">Netflix IMDb eklentisi</span><span lang="en">Netflix IMDb extension</span></a></li>
+            <li><a href="#ai-2048">2048 AI</a></li>
+            <li><a href="#web-ofisi">Web Ofisi Mobile</a></li>
+            <li><a href="#deepfake"><span lang="tr">Deepfake tespiti</span><span lang="en">Deepfake detection</span></a></li>
+            <li><a href="#isg">İSG Takip</a></li>
+          </ol>
+
+          <div>
+
+            <!-- Netflix -->
+            <article class="project" id="netflix">
+              <p class="project__context">
+                <span lang="tr">Kişisel proje</span>
+                <span lang="en">Personal project</span>
+              </p>
+              <h3 class="project__title"><span lang="tr">Netflix IMDb Eklentisi</span><span lang="en">Netflix IMDb Rating Extension</span></h3>
+              <p class="project__result" lang="tr">Ana sayfada 100 kart için 100 ayrı istek yerine 5 toplu istek gidiyor.</p>
+              <p class="project__result" lang="en">On the home page, 100 cards take 5 batch requests instead of 100 separate ones.</p>
+              <p class="project__desc" lang="tr">Netflix’te film ve dizi kartlarının üzerine IMDb puanını ekleyen bir Chrome eklentisi. Puanlar, IMDb’nin resmi veri setlerinden oluşturulan bir PostgreSQL veritabanından geliyor. Arada Redis önbelleği olan bir FastAPI servisi var.</p>
+              <p class="project__desc" lang="en">A Chrome extension that adds IMDb ratings to movie and TV show cards on Netflix. Ratings come from a PostgreSQL database built from IMDb’s official datasets, served by a FastAPI service with a Redis cache in front of it.</p>
+
+              <figure class="media">
+                <div class="media__frame">
+                  <video data-demo controls muted loop playsinline preload="metadata" width="860" height="608" poster="assets/netflix-demo-poster.jpg"
+                    aria-label="Netflix kartlarında beliren IMDb puanları" data-i18n-attr="aria-label"
+                    data-tr-aria-label="Netflix kartlarında beliren IMDb puanları" data-en-aria-label="IMDb ratings appearing on Netflix cards">
+                    <source src="assets/netflix-demo.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption>
+                  <span lang="tr">Kartlar ekrana girdikçe puanlar beliriyor, detay penceresinde daha büyük bir rozet çıkıyor.</span>
+                  <span lang="en">Ratings appear as cards scroll into view, and a larger badge shows up in the detail modal.</span>
+                </figcaption>
+              </figure>
+
+              <ul class="details" lang="tr">
+                <li>Önbellek üç katmanlı. Önce eklentinin kendi belleğine (5 dakika), sonra Redis’e (1 saat), en son PostgreSQL’e bakılıyor.</li>
+                <li>Ekrana giren kartların başlıkları toplanıp 20’şerli gruplar hâlinde gönderiliyor. Sunucu bunların hepsini Redis’te tek bir MGET komutuyla arıyor.</li>
+                <li>Detay penceresi açıldığında puan eklentinin belleğinden 1,35 ms’de geliyor.</li>
+                <li>Veritabanında 59.980 film ve dizi, 23.976 Türkçe başlık var. Mimari kararları 11 ADR’de belgeledim.</li>
+                <li>IMDb verisi yalnızca ticari olmayan kullanım için lisanslı. Bu yüzden canlı API anahtarla korunuyor ve eklenti dağıtılmıyor.</li>
+              </ul>
+              <ul class="details" lang="en">
+                <li>A three-level cache. The extension’s own memory is checked first (5 minutes), then Redis (1 hour), then PostgreSQL.</li>
+                <li>Titles of cards that scroll into view are collected and sent in groups of up to 20. The server looks them all up in Redis with a single MGET.</li>
+                <li>When a detail modal opens, the rating comes from the extension’s memory in 1.35 ms.</li>
+                <li>The database holds 59,980 movies and shows and 23,976 Turkish titles. Architecture decisions are recorded in 11 ADRs.</li>
+                <li>IMDb’s data is licensed for non-commercial use only, so the live API requires a key and the extension is not distributed.</li>
+              </ul>
+
+              <div class="project__foot">
+                <ul class="tags">
+                  <li>Python</li><li>FastAPI</li><li>PostgreSQL</li><li>Redis</li><li>Vercel</li><li>Chrome MV3</li><li>JavaScript</li>
+                </ul>
+                <a class="repo-link" href="https://github.com/merttereci/netflix-imdb-extension" rel="noopener"><span lang="tr">Kaynak kod</span><span lang="en">Source code</span></a>
+              </div>
+            </article>
+
+            <!-- 2048 -->
+            <article class="project" id="ai-2048">
+              <p class="project__context">
+                <span lang="tr">Arama algoritmaları</span>
+                <span lang="en">Search algorithms</span>
+              </p>
+              <h3 class="project__title"><span lang="tr">2048’de Alfa-Beta ve Expectimax Karşılaştırması</span><span lang="en">Alpha-Beta vs Expectimax in 2048</span></h3>
+              <p class="project__result" lang="tr">100 oyunluk testte derinlik 3’teki Expectimax oyunların %74’ünde 2048 taşına ulaştı, Alfa-Beta en iyi ayarında %40’ta kaldı.</p>
+              <p class="project__result" lang="en">Over 100 games, Expectimax at depth 3 reached the 2048 tile in 74% of games, while Alpha-Beta’s best setting reached it in 40%.</p>
+              <p class="project__desc" lang="tr">2048’i insan müdahalesi olmadan oynayan iki arama ajanı aynı tohumlu oyunlarda karşılaştırılıyor. Alfa-Beta yeni gelen taşı onu en kötü yere koyan bir rakip gibi görüyor. Expectimax ise taşın gerçekte olduğu gibi rastgele geldiğini hesaba katıyor.</p>
+              <p class="project__desc" lang="en">Two search agents play 2048 on their own and are compared on the same seeded games. Alpha-Beta treats each new tile as an adversary that places it in the worst possible spot, while Expectimax treats it as the random event it actually is.</p>
+
+              <figure class="media">
+                <div class="media__frame">
+                  <video data-demo controls muted loop playsinline preload="metadata" width="500" height="560" poster="assets/2048-demo-poster.jpg"
+                    aria-label="2048 oynayan Expectimax ajanı" data-i18n-attr="aria-label"
+                    data-tr-aria-label="2048 oynayan Expectimax ajanı" data-en-aria-label="Expectimax agent playing 2048">
+                    <source src="assets/2048-demo.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <figcaption>
+                  <span lang="tr">Derinlik 3’teki Expectimax, tohum 40. Ölçülen 100 oyunun en iyisi (79.784 puan, 4096 taşı).</span>
+                  <span lang="en">Expectimax at depth 3, seed 40. The best of the 100 measured games (79,784 points, 4096 tile).</span>
+                </figcaption>
+              </figure>
+
+              <ul class="details" lang="tr">
+                <li>Derinlik 4’teki Expectimax, hamle başına yaklaşık 4 kat daha az süre harcayarak (2,42 ms ve 9,18 ms) derinlik 6’daki Alfa-Beta’yı geçiyor.</li>
+                <li>Arama ve değerlendirme fonksiyonları Numba ile derleniyor. Hamle başına süre düz Python’a göre yaklaşık 20 kat kısaldı, iki sürüm de birebir aynı hamleleri seçti.</li>
+                <li>Tahta altı heuristic’in ağırlıklı toplamıyla puanlanıyor. Boş hücre sayısı, monotonluk, düzgünlük, birleşme potansiyeli, köşe bonusu ve yılan deseni.</li>
+                <li>Sonradan yapılan kod değişikliklerinin ajanların oyununu değiştirmediği, kayıtlı 427 oyun yeniden oynatılarak doğrulandı.</li>
+              </ul>
+              <ul class="details" lang="en">
+                <li>Expectimax at depth 4 beats Alpha-Beta at depth 6 while spending about 4 times less time per move (2.42 ms against 9.18 ms).</li>
+                <li>Search and evaluation are compiled with Numba. Time per move was about 20 times shorter than in plain Python, and both versions chose exactly the same moves.</li>
+                <li>Boards are scored as a weighted sum of six heuristics. Empty cells, monotonicity, smoothness, merge potential, a corner bonus and a snake pattern.</li>
+                <li>Later code changes were checked by replaying 427 recorded games, and every one played out the same.</li>
+              </ul>
+
+              <div class="project__foot">
+                <ul class="tags">
+                  <li>Python</li><li>Numba</li><li>NumPy</li><li>Pygame</li><li>Matplotlib</li>
+                </ul>
+                <a class="repo-link" href="https://github.com/merttereci/2048-ai" rel="noopener"><span lang="tr">Kaynak kod</span><span lang="en">Source code</span></a>
+              </div>
+            </article>
+
+            <!-- Web Ofisi -->
+            <article class="project" id="web-ofisi">
+              <p class="project__context">
+                <span lang="tr">Staj projesi</span>
+                <span lang="en">Internship project</span>
+              </p>
+              <h3 class="project__title">Web Ofisi Mobile</h3>
+              <p class="project__result" lang="tr">30 günlük stajımda tek başıma geliştirdim.</p>
+              <p class="project__result" lang="en">Built solo during a 30-day internship.</p>
+              <p class="project__desc" lang="tr">Hazır web yazılımları (script) ve hosting paketleri satan bir Flutter e-ticaret uygulaması. Uygulama 158 web scriptini XML’den çekip listeliyor. Kullanıcı hesapları, favoriler, sepet, sipariş ve destek talepleri ise json-server ile taklit edilen bir REST API üzerinden çalışıyor.</p>
+              <p class="project__desc" lang="en">A Flutter e-commerce app for selling ready-made web software (scripts) and hosting packages. It lists 158 web scripts from an XML feed and handles user accounts, favorites, cart, checkout and support tickets through a REST API simulated with json-server.</p>
+
+              <figure class="media">
+                <div class="phones">
+                  <img src="assets/webofisi-home.webp" width="400" height="867" loading="lazy" alt="Ana sayfa" data-i18n-attr="alt" data-tr-alt="Ana sayfa" data-en-alt="Home screen">
+                  <img src="assets/webofisi-detail.webp" width="400" height="867" loading="lazy" alt="Ürün detayı" data-i18n-attr="alt" data-tr-alt="Ürün detayı" data-en-alt="Product detail">
+                  <img src="assets/webofisi-cart.webp" width="400" height="867" loading="lazy" alt="Sepet" data-i18n-attr="alt" data-tr-alt="Sepet" data-en-alt="Cart">
+                </div>
+                <figcaption>
+                  <span lang="tr">Ana sayfa, ürün detayı ve sepet.</span>
+                  <span lang="en">Home, product detail and cart.</span>
+                </figcaption>
+              </figure>
+
+              <ul class="details" lang="tr">
+                <li>Modeller gerçek backend veritabanının tablolarıyla aynı yapıda. Gerçek API’ye geçmek için büyük ölçüde tek bir adresi değiştirmek yetecek şekilde tasarlandı.</li>
+                <li>Durum yönetimi Provider ile yapılıyor. Oturum cihazda saklandığı için uygulama kapatılıp açıldığında yeniden giriş gerekmiyor.</li>
+                <li>Scriptler ve hosting paketleri aynı sepete eklenebiliyor. Ara toplam, %20 KDV ve genel toplam ayrı ayrı gösteriliyor.</li>
+                <li>Destek talebine kameradan ya da galeriden fotoğraf eklenebiliyor, fotoğraf gönderilmeden önce küçültülüyor.</li>
+              </ul>
+              <ul class="details" lang="en">
+                <li>The models mirror the tables of the real backend database, so moving to the production API is designed to mainly require changing a single base URL.</li>
+                <li>State is managed with Provider. The session is kept on the device, so there is no need to log in again after restarting the app.</li>
+                <li>Scripts and hosting packages go into the same cart, with subtotal, 20% VAT and total shown separately.</li>
+                <li>Support tickets can include a photo from the camera or gallery, which is compressed before it is sent.</li>
+              </ul>
+
+              <div class="project__foot">
+                <ul class="tags">
+                  <li>Flutter</li><li>Dart</li><li>Provider</li><li>REST</li><li>XML</li>
+                </ul>
+                <a class="repo-link" href="https://github.com/merttereci/web-ofisi-mobile" rel="noopener"><span lang="tr">Kaynak kod</span><span lang="en">Source code</span></a>
+              </div>
+            </article>
+
+            <!-- Tez -->
+            <article class="project" id="deepfake">
+              <p class="project__context">
+                <span lang="tr">Bitirme projesi, üç kişilik ekip</span>
+                <span lang="en">Senior thesis, team of three</span>
+              </p>
+              <h3 class="project__title"><span lang="tr">Derin Öğrenme Yaklaşımları ile Deepfake Tespiti</span><span lang="en">Deepfake Detection with Deep Learning Approaches</span></h3>
+              <p class="project__result" lang="tr">CutMixup ile gerçek yüzleri doğru tanıma oranı (Real Recall) %83,07’den %93,42’ye çıktı.</p>
+              <p class="project__result" lang="en">With CutMixup, the rate of correctly identified real faces (Real Recall) rose from 83.07% to 93.42%.</p>
+              <p class="project__desc" lang="tr">FaceForensics++ (c23) ve Celeb-DF v2 veri kümelerinde dokuz farklı modeli sekiz konfigürasyonda, hepsini aynı eğitim ayarlarıyla karşılaştırdık. En tutarlı sonucu ViT-Base verdi. Bu modeli, her batch’te CutMix ya da MixUp’tan birini eşit olasılıkla seçen CutMixup yöntemiyle yeniden eğittik.</p>
+              <p class="project__desc" lang="en">We compared nine models across eight configurations on the FaceForensics++ (c23) and Celeb-DF v2 datasets, all with the same training setup. ViT-Base gave the most consistent results. We then retrained it with CutMixup, which applies either CutMix or MixUp to each batch with equal probability.</p>
+
+              <figure class="media">
+                <a class="zoom media__frame media__frame--paper" href="assets/tez-akis.webp" data-zoom>
+                  <img src="assets/tez-akis.webp" width="1446" height="918" loading="lazy"
+                    alt="Veri kümelerinden model seçimine ve CutMixup ile yeniden eğitime uzanan çalışma akışı" data-i18n-attr="alt"
+                    data-tr-alt="Veri kümelerinden model seçimine ve CutMixup ile yeniden eğitime uzanan çalışma akışı"
+                    data-en-alt="Workflow from the datasets to model selection and retraining with CutMixup">
+                </a>
+                <figcaption>
+                  <span lang="tr">Çalışmanın akışı. Görsele tıklayınca tam boyutta açılıyor.</span>
+                  <span lang="en">Workflow of the study. The image opens full size when clicked.</span>
+                </figcaption>
+              </figure>
+
+              <ul class="details" lang="tr">
+                <li>Real Recall’daki artış FF++ dengeli 80-20 yapılandırmasında. Aynı yapılandırmada sahte yüzleri yakalama oranı (Fake Recall) %87,65’ten %80,27’ye düştü.</li>
+                <li>CutMixup, Celeb-DF v2’de %99,89 AUC’ye ulaştı.</li>
+                <li>Dengesiz veride doğruluk tek başına yanıltıcı. MesoNet %84,27 doğruluğa ulaştı ama gerçek yüzlerin yalnızca %9,87’sini yakalayabildi.</li>
+                <li>Sınırlamalar. Çapraz veri kümesi testi yapılmadı, sadece c23 sıkıştırma seviyesi kullanıldı, CutMixup yalnızca ViT-Base üzerinde denendi.</li>
+              </ul>
+              <ul class="details" lang="en">
+                <li>The Real Recall gain is on the FF++ balanced 80-20 configuration. In the same configuration, Fake Recall dropped from 87.65% to 80.27%.</li>
+                <li>On Celeb-DF v2, CutMixup reached an AUC of 99.89%.</li>
+                <li>On imbalanced data, accuracy alone is misleading. MesoNet reached 84.27% accuracy but caught only 9.87% of real faces.</li>
+                <li>Limitations. No cross-dataset tests, only the c23 compression level, and CutMixup was tried only on ViT-Base.</li>
+              </ul>
+
+              <div class="project__foot">
+                <ul class="tags">
+                  <li lang="tr">Derin öğrenme</li><li lang="en">Deep learning</li>
+                  <li>ViT</li><li>CNN</li>
+                  <li lang="tr">Transfer öğrenme</li><li lang="en">Transfer learning</li>
+                  <li lang="tr">Veri artırma</li><li lang="en">Data augmentation</li>
+                </ul>
+                <span class="note"><span lang="tr">Kod paylaşılmıyor.</span><span lang="en">The code is not public.</span></span>
+              </div>
+            </article>
+
+            <!-- İSG Takip -->
+            <article class="project" id="isg">
+              <p class="project__context">
+                <span lang="tr">Bir işyeri hekimi için geliştirildi</span>
+                <span lang="en">Built for an occupational physician</span>
+              </p>
+              <h3 class="project__title">İSG Takip</h3>
+              <p class="project__result" lang="tr">Hekimin kâğıtla tuttuğu kayıtların yerini aldı. Tahminen 50 ile 100 arasında şirketin takibi bu uygulamayla yapıldı.</p>
+              <p class="project__result" lang="en">It replaced the physician’s paper records. An estimated 50 to 100 companies were tracked with it.</p>
+              <p class="project__desc" lang="tr">Birçok şirketin iş sağlığı ve güvenliği evrakını tek yerden takip etmek için yazılmış bir Android uygulaması. Her şirkette hangi zorunlu belgelerin tamam olduğunu, hangi çalışanın eğitimini ve işe giriş muayenesini yaptırdığını gösteriyor.</p>
+              <p class="project__desc" lang="en">An Android app for tracking occupational health and safety paperwork across many companies. It shows which mandatory documents each company has, and which employees have completed their training and pre-employment medical exam.</p>
+
+              <figure class="media">
+                <div class="phones">
+                  <img src="assets/isg-list.webp" width="400" height="867" loading="lazy" alt="Şirket listesi" data-i18n-attr="alt" data-tr-alt="Şirket listesi" data-en-alt="Company list">
+                  <img src="assets/isg-detail.webp" width="400" height="867" loading="lazy" alt="Şirket detayı" data-i18n-attr="alt" data-tr-alt="Şirket detayı" data-en-alt="Company detail">
+                  <img src="assets/isg-employees.webp" width="400" height="867" loading="lazy" alt="Çalışan kayıtları" data-i18n-attr="alt" data-tr-alt="Çalışan kayıtları" data-en-alt="Employee records">
+                </div>
+                <figcaption>
+                  <span lang="tr">Ekran görüntüleri örnek verilerle üretildi.</span>
+                  <span lang="en">Screenshots were generated from sample data.</span>
+                </figcaption>
+              </figure>
+
+              <ul class="details" lang="tr">
+                <li>İlk geliştirme sürecinde hekimin geri bildirimleriyle şekillendi. Google Play üzerinden değil, doğrudan APK olarak dağıtıldı.</li>
+                <li>İnternetsiz çalışıyor. Bütün veri cihazda duruyor, hesap ya da internet bağlantısı gerekmiyor.</li>
+                <li>Kayıtlı veri bozulsa ya da eski bir sürümden kalsa da okunabiliyor. Hiç okunamayan veri, üzerine yazılmadan önce ayrı bir yere yedekleniyor.</li>
+                <li>Birim testleri JSON dönüşümlerini, eski sürüm verisini ve bozuk veriyi kapsıyor.</li>
+              </ul>
+              <ul class="details" lang="en">
+                <li>Shaped by the physician’s feedback during early development. Distributed directly as an APK, not through Google Play.</li>
+                <li>Works offline. All data stays on the device, and no account or internet connection is needed.</li>
+                <li>Stored data can still be read if it is damaged or left over from an older version. Data that can’t be read at all is backed up separately before anything is overwritten.</li>
+                <li>Unit tests cover JSON round trips, data from older versions and damaged data.</li>
+              </ul>
+
+              <div class="project__foot">
+                <ul class="tags">
+                  <li>Flutter</li><li>Dart</li><li>Provider</li><li>SharedPreferences</li>
+                </ul>
+                <a class="repo-link" href="https://github.com/merttereci/isg-takip-flutter" rel="noopener"><span lang="tr">Kaynak kod</span><span lang="en">Source code</span></a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Yetenekler -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="wrap">
+        <h2 class="section__title" id="skills-title"><span lang="tr">Yetenekler</span><span lang="en">Skills</span></h2>
+        <p class="section__lead" lang="tr">Yukarıdaki projelerde kullandıklarım.</p>
+        <p class="section__lead" lang="en">What I used in the projects above.</p>
+        <dl class="skills">
+          <div>
+            <dt><span lang="tr">Diller</span><span lang="en">Languages</span></dt>
+            <dd><ul><li>Python</li><li>Dart</li><li>JavaScript</li><li>C#</li><li>SQL</li></ul></dd>
+          </div>
+          <div>
+            <dt>Backend</dt>
+            <dd><ul><li>FastAPI</li><li>SQLAlchemy, Pydantic</li><li>PostgreSQL</li><li>Redis</li><li lang="tr">REST API tasarımı</li><li lang="en">REST API design</li></ul></dd>
+          </div>
+          <div>
+            <dt><span lang="tr">Mobil</span><span lang="en">Mobile</span></dt>
+            <dd><ul><li>Flutter</li><li>Provider</li><li>SharedPreferences</li></ul></dd>
+          </div>
+          <div>
+            <dt><span lang="tr">Yapay zeka</span><span lang="en">AI</span></dt>
+            <dd><ul>
+              <li lang="tr">Derin öğrenme</li><li lang="en">Deep learning</li>
+              <li lang="tr">Transfer öğrenme, veri artırma</li><li lang="en">Transfer learning, data augmentation</li>
+              <li lang="tr">Arama algoritmaları</li><li lang="en">Search algorithms</li>
+              <li>NumPy, Numba</li>
+            </ul></dd>
+          </div>
+          <div>
+            <dt><span lang="tr">Araçlar</span><span lang="en">Tools</span></dt>
+            <dd><ul><li>Git</li><li>Vercel, Supabase</li><li lang="tr">Chrome eklentileri (MV3)</li><li lang="en">Chrome extensions (MV3)</li><li>Pandas, Matplotlib</li></ul></dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- İletişim -->
+    <section class="section" id="contact" aria-labelledby="contact-title">
+      <div class="wrap">
+        <h2 class="section__title" id="contact-title"><span lang="tr">İletişim</span><span lang="en">Contact</span></h2>
+        <p class="contact__text" lang="tr">İş fırsatları ya da projelerim hakkında bana yazabilirsiniz.</p>
+        <p class="contact__text" lang="en">Feel free to reach out about job opportunities or my projects.</p>
+        <div class="actions">
+          <a class="btn btn--primary" href="#contact" data-email><span data-email-text>merttereci4 [at] gmail.com</span></a>
+          <a class="btn" href="https://www.linkedin.com/in/mert-tereci" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/merttereci" rel="noopener">GitHub</a>
+          <a class="btn" lang="tr" href="assets/Mert-Tereci-CV-TR.pdf" download>CV’yi indir</a>
+          <a class="btn" lang="en" href="assets/Mert-Tereci-CV-EN.pdf" download>Download CV</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">Mert Tereci, 2026</div>
+  </footer>
+
+  <dialog class="lightbox" aria-label="Tam boyut görsel" data-i18n-attr="aria-label" data-tr-aria-label="Tam boyut görsel" data-en-aria-label="Full size image">
+    <button type="button" class="lightbox__close"><span lang="tr">Kapat</span><span lang="en">Close</span></button>
+    <img src="" alt="">
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
